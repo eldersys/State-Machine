@@ -67,7 +67,10 @@ public class Moving : IState
     private void MoveConstraint()
     {
         //Set the rotation of the player to the rotation of the anchor of the camera. Since the anchor of the camera is the child of the camera, the rotation are the same.
-        Quaternion camRotation = m_owner.m_anchor.transform.rotation;
+        Quaternion camRotation = m_owner.m_playerCamera.transform.rotation;
+        camRotation.x = m_owner.transform.rotation.x;
+        camRotation.z = m_owner.transform.rotation.z;
+
         m_owner.transform.SetPositionAndRotation(m_owner.transform.position, camRotation);
         
         //Get the input axis in a vector2

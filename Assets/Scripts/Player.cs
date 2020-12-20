@@ -13,6 +13,7 @@ public enum MovementMode
 /// <summary>
 /// The player class, implementing a state machine
 /// </summary>
+[RequireComponent(typeof(CharacterController))]
 public class Player : MonoBehaviour
 {
     #region VARIABLES
@@ -47,8 +48,8 @@ public class Player : MonoBehaviour
     
     // -------------------------- CAMERA -------------------------- //
     
-    /// <summary>The anchor of rotation based on the camera</summary>
-    [Space(8.0f)][Tooltip("The anchor of rotation based on the camera")] [SerializeField] public GameObject m_anchor;
+    /// <summary>The player camera</summary>
+    [Space(8.0f)][Tooltip("The player camera")] [SerializeField] public Camera m_playerCamera;
     
     /////////////////////////////////// HIDDEN VARIABLES ///////////////////////////////////
     private StateMachine m_stateMachine = new StateMachine();

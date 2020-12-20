@@ -7047,7 +7047,7 @@ MonoBehaviour:
   m_characterController: {fileID: 1124154651}
   m_speed: 10
   m_gravity: -20
-  m_movementMode: 1
+  m_movementMode: 0
   m_inputAxis: {x: 0, y: 0}
   m_horizontal: Horizontal
   m_vertical: Vertical

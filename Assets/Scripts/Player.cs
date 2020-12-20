@@ -65,6 +65,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.DrawRay(transform.position, transform.forward * 5.0f, Color.red);
         //Update the execution of the current state
         m_stateMachine.Update();
     }
